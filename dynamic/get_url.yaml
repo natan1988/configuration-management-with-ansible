@@ -10,7 +10,7 @@
         dest: /tmp/
     - name: install unzip
       package:
-        name: gzip
+        name: unzip
         state: present
     - name: unzip
       unarchive:
