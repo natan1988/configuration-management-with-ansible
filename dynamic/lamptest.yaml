@@ -20,7 +20,7 @@
         state: started
         enabled: yes
     - name: start mysql
-        systemd:  
+      systemd:  
         name: mysql
         state: started
         enabled: yes
