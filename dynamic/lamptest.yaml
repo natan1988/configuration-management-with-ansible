@@ -7,7 +7,7 @@
     - name: install multiple packages
       package: 
         name: "{{item}}"
-        state: latest
+        state: present
       with_items: 
         - apache2
         - mysql
