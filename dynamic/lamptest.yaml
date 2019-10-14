@@ -4,28 +4,27 @@
   become: yes
   become_method: sudo 
   tasks: 
-    - name: rep
-      yum:
-        name: centos-release-scl.noarch
-        state: present
     - name: install multiple packages
       package: 
         name: "{{item}}"
         state: present
       with_items: 
-        - apache
+        - httpd
         - mariadb
         - mariadb-server
-        - rh-php72
-        - rh-php72-php-mysqlnd
+        - php
+        - php-mysql
+        - php-pdo
+        - php-gd
+        - php-mbstring
     - name: start apache
       systemd:
         name: httpd
         state: restarted
         enabled: yes
-    - name: start mysql
+    - name: start mariadb
       systemd:  
-        name: mariadb
+        name: httpd
         state: restarted
         enabled: yes
 
