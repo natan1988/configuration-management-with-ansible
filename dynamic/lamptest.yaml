@@ -14,12 +14,13 @@
         - mariadb-server
         - php
         - php-mysql
----
 - name: start apache
-  systemd:
+  service:
     name: httpd
     state: started
     enabled: yes
+- name: start madiadb
+  service:  
     name: mariadb
     state: started
     enabled: yes
