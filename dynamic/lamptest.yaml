@@ -7,13 +7,13 @@
     - name: install multiple packages
       package: 
         name: "{{item}}"
-        state: present
+        state: latest
       with_items: 
         - httpd
         - mysql
         - mysql-server
-        - php7.0
-        - php7.0-mysql
+        - php
+        - php-mysql
     - name: start apache
       systemd:
         name: httpd
