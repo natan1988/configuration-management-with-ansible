@@ -1,0 +1,19 @@
+---
+- name: install LAMP stack
+  hosts: all
+  become: yes
+  become_method: sudo 
+  tasks: 
+    - name: LAMP
+      package: 
+        name: "{{item}}"
+        state: present
+      with_ items: 
+        - httpd
+        - mariadb
+        - mariadb-server
+        - php7.0
+        - php7.0-mysql
+
+
+    
