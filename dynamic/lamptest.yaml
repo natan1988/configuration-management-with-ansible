@@ -4,7 +4,7 @@
   become: yes
   become_method: sudo 
   tasks: 
-    - name: LAMP
+    - name: install multiple packages
       package: 
         name: "{{item}}"
         state: present
