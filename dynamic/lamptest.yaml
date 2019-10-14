@@ -9,14 +9,14 @@
         name: "{{item}}"
         state: latest
       with_items: 
-        - httpd
+        - apache2
         - mysql
         - mysql-server
-        - php
-        - php-mysql
+        - php7.0
+        - php7.0-mysql
     - name: start apache
       systemd:
-        name: httpd
+        name: apache2
         state: started
         enabled: yes
     - name: start mysql
