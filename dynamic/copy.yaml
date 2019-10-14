@@ -1,6 +1,8 @@
 ---
 - name: cp
   hosts: all
+  become: yes
+  become_method: yes
   tasks:
     - name: cp php
       copy:
