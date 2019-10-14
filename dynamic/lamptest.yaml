@@ -15,6 +15,9 @@
         - php
         - php-mysql
 - name: start apache
+  hosts: all
+  become: yes
+  become_method: sudo
   service:
     name: httpd
     state: started
