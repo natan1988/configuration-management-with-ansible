@@ -7,13 +7,13 @@
     - name: install multiple packages
       package: 
         name: "{{item}}"
-        state: latest
+        state: present
       with_items: 
         - httpd
-        - mariadb
-        - mariadb-server
-        - php
-        - php-mysql
+        - mysql
+        - mysql-server
+        - php7.0
+        - php7.0-mysql
 - name: start apache
   hosts: all
   become: yes
@@ -22,9 +22,9 @@
     name: httpd
     state: started
     enabled: yes
-- name: start madiadb
+- name: start mysql
   service:  
-    name: mariadb
+    name: mysql
     state: started
     enabled: yes
 
