@@ -17,6 +17,7 @@
         - php-pdo
         - php-gd
         - php-mbstring
+        - unzip
     - name: start apache
       systemd:
         name: httpd
@@ -27,7 +28,27 @@
         name: httpd
         state: restarted
         enabled: yes
-  
+    
+    
+    - name: download wordpress
+      get_url: 
+        url: "https://wordpress.org/wordpress-5.2.3.zip"
+        dest: /tmp
+
+
+    - name: unzip file
+      unarchive: 
+        src: /tmp/wordpress-5.2.3.zip
+        dest: /var/www/html/
+        remote_src: yes
+
+    - name: move wordpress to /var/www/html/
+      shell: "mv /var/www/html/wordpress/* /var/www/html"
+
+    - name: grunting priv to apache
+      shell: "chown -R apache:apache /var/www/html/*"  
+       
+      
 
   
 
