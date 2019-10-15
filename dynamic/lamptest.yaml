@@ -31,7 +31,7 @@
         enabled: yes
 
 
-    - name: upgrade php
+    - name: updatee php
       shell: "yum -y install epel-release" 
     - name: a  
       shell: "rpm -Uvh http://rpms.remirepo.net/enterprise/remi-release-7.rpm"
