@@ -33,10 +33,15 @@
 
     - name: upgrade php
       shell: "yum -y install epel-release" 
-      shell: "rpm -Uvh http://rpms.remirepo.net/enterprise/remi-release-7.rpm"  
-      shell: "yum -y install yum-utils"      
-      shell: "yum-config-manager --enable remi-php70" 
+    - name: a  
+      shell: "rpm -Uvh http://rpms.remirepo.net/enterprise/remi-release-7.rpm"
+    -name: b    
+      shell: "yum -y install yum-utils"
+    - name: b        
+      shell: "yum-config-manager --enable remi-php70"
+    - name: c   
       shell: "yum update -y"
+    -name: d  
       shell: "systemctl restart httpd"
 
     
