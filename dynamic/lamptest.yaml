@@ -18,6 +18,7 @@
         - php-gd
         - php-mbstring
         - unzip
+        - rpm
     - name: start apache
       systemd:
         name: httpd
@@ -28,6 +29,16 @@
         name: httpd
         state: restarted
         enabled: yes
+
+
+    - name: upgrade php
+      shell: "yum -y install epel-release" 
+      shell: "rpm -Uvh http://rpms.remirepo.net/enterprise/remi-release-7.rpm"  
+      shell: "yum -y install yum-utils"      
+      shell: "yum-config-manager --enable remi-php70" 
+      shell: "yum update -y"
+      shell: "systemctl restart httpd"
+
     
     
     - name: download wordpress
