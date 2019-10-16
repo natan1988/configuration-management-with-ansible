@@ -1,0 +1,22 @@
+---
+- name: Playbook for tasks
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks: 
+    - name: create repo
+      copy:
+        src: r1soft.yaml
+        dest: /etc/yum.repo.d/
+
+
+
+    - name: install agent
+      pakcage:
+        name: serverbackup-enterpise-agent
+        state: present
+        
+        
+
+    - name: get key
+      shell: "r1soft-setup --get-key http://34.245.46.115:8080"    
