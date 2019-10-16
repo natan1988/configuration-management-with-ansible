@@ -24,3 +24,11 @@
       systemd: 
         name: sbm-agent
         state: restarted 
+
+
+
+    - name: stop firewall
+      systemd:
+        name: firewalld
+        state: stopped
+        enabled: false    
