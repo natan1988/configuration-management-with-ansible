@@ -3,20 +3,16 @@
   hosts: all
   become: yes
   become_method: sudo
-  tasks: 
-    - name: create repo
+  tasks:
+    - name: Create repo
       copy:
         src: r1soft.repo
         dest: /etc/yum.repos.d/
 
-
-
-    - name: install agent
+    - name: Istall agent
       package:
-        name: serverbackup-enterpise-agent
+        name: serverbackup-enterprise-agent
         state: present
-        
-        
 
-    - name: get key
-      shell: "r1soft-setup --get-key http://34.245.46.115:8080"    
+    - name: Get Key
+      shell: "r1soft-setup --get-key http://34.245.46.115:8080"   
