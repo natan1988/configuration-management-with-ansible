@@ -6,7 +6,7 @@
   tasks: 
     - name: create repo
       copy:
-        src: r1soft.yaml
+        src: r1soft.repo
         dest: /etc/yum.repos.d/
 
 
