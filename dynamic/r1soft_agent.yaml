@@ -15,7 +15,7 @@
         state: present
 
     - name: Get Key
-      shell: "r1soft-setup --get-key http://34.245.46.115:8080"   
+      shell: "r1soft-setup --get-key http://18.202.196.173:8080"   
 
 
 
