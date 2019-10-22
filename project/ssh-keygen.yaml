@@ -1,0 +1,27 @@
+---
+
+- hosts: all
+  tasks:    
+    - name: create key
+      remote_user: "{{item}}"
+      shell: ssh-keygen
+      with_items:
+        - max
+        - caglar
+        - talant
+        - enver
+        - murat
+        - ulan
+        - mirlan
+        - maksat
+        - ali
+        - tunji
+        - ahmet
+        - sera
+        - khuslen
+        - mahsuda
+        - anara
+        - mustafa
+        - syed
+        - ahmed
+        - said
