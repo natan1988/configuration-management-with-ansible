@@ -9,27 +9,21 @@
         name: "{{item}}"
         generate_ssh_key: yes
       with_items:
-        - max
-        - caglar
-        - talant
-        - enver
-        - murat
         - ulan
-        - mirlan
-        - maksat
-        - ali
-        - tunji
-        - ahmet
+        - miki
+        - murat
         - sera
-        - khuslen
         - mahsuda
         - anara
+        - ali
         - mustafa
+        - caglar
+        - talant
+        - max
+        - khuslen
+        - tunji
         - syed
         - ahmed
-        - said
-        
-
 
         
 
