@@ -1,0 +1,35 @@
+---
+- name: Playbook for tasks
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+    - name:  generate key 
+      user:
+        name: "{{item}}"
+        generate_ssh_key: yes
+      with_items:
+        - max
+        - caglar
+        - talant
+        - enver
+        - murat
+        - ulan
+        - mirlan
+        - maksat
+        - ali
+        - tunji
+        - ahmet
+        - sera
+        - khuslen
+        - mahsuda
+        - anara
+        - mustafa
+        - syed
+        - ahmed
+        - said
+
+
+        
+
+     
