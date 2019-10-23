@@ -28,7 +28,7 @@
 
 
     - name: output
-      shell: uneme -r 
+      shell: uname -r 
       register: kernel
 
 
