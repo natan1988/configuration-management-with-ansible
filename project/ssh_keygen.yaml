@@ -4,12 +4,12 @@
   become: yes
   become_method: sudo 
   tasks: 
-  - name: generate keys
-  - include_vars: users.yaml
+    - name: gen key 
+    - include_vars: users.yaml
 
 
-  - name: generate keys
-    authorized_key: user={{item.username}}
-      key="{{lookup('file', 'pub_keys/{{ item.username }}.pub) }}"
-    wtih_items: '{{users}}'    
+    - name: sshkeygen
+      authorized_key: user={{item.username}}
+        key="{{lookup('file', 'pub_keys/{{ item.username }}.pub) }}"
+      wtih_items: '{{users}}'    
 
