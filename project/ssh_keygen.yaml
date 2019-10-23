@@ -5,8 +5,8 @@
   become_method: sudo 
   tasks: 
     - name: sshkeygen
-      authorized_key: user={{item.username}}
-        key="{{lookup('file', 'pub_keys/{{ item.username }}.pub) }}"
+      authorized_key: user={{items}}
+        key="{{lookup('file', 'pub_keys/{{ items }}.pub) }}"
       with_items: 
         - max
         - caglar
