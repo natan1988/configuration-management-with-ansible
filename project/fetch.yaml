@@ -1,0 +1,8 @@
+---
+- name: create user with ssh key
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+  - include_vars: users.yaml
+  
