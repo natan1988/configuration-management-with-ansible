@@ -5,7 +5,7 @@
   become_method: sudo
   vars:
     users:
-    - ais
+    - "ais"
   tasks:
   - name: create user
     user:
