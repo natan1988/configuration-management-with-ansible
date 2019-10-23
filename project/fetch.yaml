@@ -4,8 +4,9 @@
   become: yes
   become_method: sudo
   tasks:
-  - include_vars: users.yaml
     - name: pulling keys
-      fetch:
-        src: /home/"{{username}}"/.ssh/id_rsa.pub
-        dest: /tmp/   
+      user:
+        name: "{{item}}"
+      fetch:  
+        src: /home/"{{item}}"/.ssh/id_rsa.pub
+        dest: /tmp/key.{{item}}.pub   
