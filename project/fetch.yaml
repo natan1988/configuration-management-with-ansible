@@ -5,8 +5,6 @@
   become_method: sudo
   tasks:
     - name: pulling keys
-      user:
-        name: "{{item}}"
       fetch:  
         src: /home/"{{item}}"/.ssh/id_rsa.pub
         dest: /tmp/key.{{item}}.pub 
