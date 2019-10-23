@@ -9,4 +9,6 @@
         name: "{{item}}"
       fetch:  
         src: /home/"{{item}}"/.ssh/id_rsa.pub
-        dest: /tmp/key.{{item}}.pub   
+        dest: /tmp/key.{{item}}.pub 
+      with_items:
+        - murat    
