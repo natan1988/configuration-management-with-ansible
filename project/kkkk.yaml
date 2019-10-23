@@ -11,6 +11,6 @@
 
 
   - name: placing ssh
-    authorized_key: user="{{item.username}}" key="{{ lookup('file/', 'authorized_keys.{{item.username}}.pub'}} " 
+    authorized_key: user="{{item.username}}" key="{{ lookup('file', './keyfile/authorized_keys.{{item.username}}.pub'}} " 
     with_items: "{{ users }}"
     
