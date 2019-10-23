@@ -8,6 +8,7 @@
       fetch:  
         src: /home/{{item}}/.ssh/id_rsa.pub
         dest: /tmp/key.{{item}}.pub 
+        flat: true
       with_items:
         - murat
         - enver
