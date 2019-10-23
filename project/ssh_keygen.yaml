@@ -1,1 +1,15 @@
 ---
+- name: generate keys
+  hosts: all
+  become: yes
+  become_method: sudo 
+  tasks: 
+  - name: generate keys
+  - include_vars: users.yaml
+
+
+  - name: generate keys
+    authorized_key: user={{item.username}}
+      key="{{lookup('file', 'pub_keys/{{ item.username }}.pub) }}"
+    wtih_items: '{{users}}'    
+
