@@ -6,7 +6,7 @@
   tasks:
     - name: pulling keys
       fetch:  
-        src: /home/"{{item}}"/.ssh/id_rsa.pub
+        src: /home/{{item}}/.ssh/id_rsa.pub
         dest: /tmp/key.{{item}}.pub 
       with_items:
         - "max"
