@@ -10,23 +10,20 @@
         dest: /root/configuration-management-with-ansible/test/keyfiles/authorized_key.{{item}}.pub
         flat: true
       with_items:
-        - max
-        - caglar
-        - talant
-        - enver
-        - murat
         - ulan
-        - mirlan
-        - maksat
-        - ali
-        - tunji
-        - ahmet
+        - miki
+        - murat
         - sera
-        - khuslen
         - mahsuda
         - anara
+        - ali
         - mustafa
+        - caglar
+        - talant
+        - max
+        - khuslen
+        - tunji
         - syed
         - ahmed
-        - said
+
         
