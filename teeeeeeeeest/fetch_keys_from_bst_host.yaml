@@ -7,7 +7,7 @@
     - name: pulling keys
       fetch:  
         src: /home/{{item}}/.ssh/id_rsa.pub
-        dest: /root/configuration-management-with-ansible/test/keyfiles/authorized_key.{{item}}.pub
+        dest: /tmp/authorized_key.{{item}}.pub
         flat: true
       with_items:
         - ulan
