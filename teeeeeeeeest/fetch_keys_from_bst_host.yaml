@@ -1,0 +1,32 @@
+---
+- name: pulling keys from remote host to local
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: pulling keys
+      fetch:  
+        src: /home/{{item}}/.ssh/id_rsa.pub
+        dest: /root/configuration-management-with-ansible/test/keyfiles/authorized_key.{{item}}.pub
+        flat: true
+      with_items:
+        - max
+        - caglar
+        - talant
+        - enver
+        - murat
+        - ulan
+        - mirlan
+        - maksat
+        - ali
+        - tunji
+        - ahmet
+        - sera
+        - khuslen
+        - mahsuda
+        - anara
+        - mustafa
+        - syed
+        - ahmed
+        - said
+        
