@@ -9,18 +9,22 @@
         name: "{{item}}"
         state: present  
       with_items:
-        - ulan
-        - miki
-        - murat
-        - sera
-        - mahsuda
-        - anara
-        - ali
-        - mustafa
+        - max
         - caglar
         - talant
-        - max
-        - khuslen
+        - enver
+        - murat
+        - ulan
+        - mirlan
+        - maksat
+        - ali
         - tunji
+        - ahmet
+        - sera
+        - khuslen
+        - mahsuda
+        - anara
+        - mustafa
         - syed
-        - ahmed        
+        - ahmed
+        - said        
