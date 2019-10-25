@@ -2,7 +2,7 @@
 - name: Playbook for provisioning
   hosts: localhost
   connection: local
-  gaather_facts: false
+  gather_facts: false
   become: false
   tasks:
     - ec2:
