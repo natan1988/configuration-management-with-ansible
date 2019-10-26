@@ -9,6 +9,8 @@
   package:
     name: serverbackup-enterprise-agent
     state: present
+  notify: agent_installed
+
 
 - name: Get Key
   shell: "r1soft-setup --get-key http://54.171.141.119:8080"  
@@ -16,11 +18,7 @@
 
 
 
-
-- name: start agent
-  systemd: 
-    name: sbm-agent
-    state: restarted 
+ 
 
 
 
