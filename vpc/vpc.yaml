@@ -27,7 +27,7 @@
       vpc_id: "{{vpc_id}}"
       cidr: "{{public_subnet_1_cidr"
       az: "{{aws_region}}a"
-      region: "{{region}}"    
+      region: "{{aws_region}}"    
       resource_tags:
         Name: "public subnet1"
     register: my_public_subnet1  
@@ -38,6 +38,7 @@
       vpc_id: "{{vpc_id}}" 
       cidr: "{{public_subnet_2_cidr"
       az: "{{aws_region}}b"
+      region: "{{aws_region}}"
       resource_tags:
         Name: "public subnet2" 
     register: my_public_subnet2
