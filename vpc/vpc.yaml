@@ -44,3 +44,13 @@
     register: my_public_subnet2
 
 
+  - name: create pb subnet 3
+    ec2_vpc_subnet: 
+      vpc_id: "{{my_vpc.vpv.id}}"
+      cidr: "{{public_subnet_3_cidr}}"
+      az: "{{aws_region}}c"
+      region: "{{aws_region}}"
+      resources_tags: 
+        Name: "public subnet3"
+    register: my_public_subnet3
+    
