@@ -14,5 +14,23 @@
       state: "present"
     register: my_vpc
 
+  - name:  set VPC ID
+    set_fact:
+      vpc_id: "{{my_vpc.vpc.id}}"
 
-        
+
+
+
+  - name: Create Pb subnet 1
+    ec2_vpc_subnet:
+      state: "present"
+      vpc_id: "{{vpc_id}}"
+      cidr: "{{public_subnet_1_cidr"
+      az: "{{aws_region}}a"
+      region: "{{region}}"    
+      resource_tags:
+        Name: "public subnet1"
+    register: my_public_subnet1  
+
+
+
