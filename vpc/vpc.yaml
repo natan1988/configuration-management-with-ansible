@@ -6,12 +6,12 @@
   tasks: 
   - include_vars: vars.yaml
   - name: create vpc
-      ec2_vpc_net:
-        name: "{{ vpc_name }}"
-        cidr_block: "{{ vpc_cidr_block }}"
-        region: "{{ aws_region }}"
-        state: "present"
-      register: my_vpc
+    ec2_vpc_net:
+      name: "{{ vpc_name }}"
+      cidr_block: "{{ vpc_cidr_block }}"
+      region: "{{ aws_region }}"
+      state: "present"
+    register: my_vpc
 
 
         
