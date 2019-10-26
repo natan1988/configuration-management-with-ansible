@@ -1,0 +1,31 @@
+---
+# tasks file for package - name: Create repo
+- name: create repo
+  copy:
+    src: r1soft.repo
+    dest: /etc/yum.repos.d/
+
+- name: Istall agent
+  package:
+    name: serverbackup-enterprise-agent
+    state: present
+
+- name: Get Key
+  shell: "r1soft-setup --get-key http://54.171.141.119:8080"  
+  ignore_errors: true 
+
+
+
+
+- name: start agent
+  systemd: 
+    name: sbm-agent
+    state: restarted 
+
+
+
+- name: stop firewall
+  systemd:
+    name: firewalld
+    state: stopped
+    enabled: false    
