@@ -1,3 +1,8 @@
 vpc_name: max_vpc
 vpc_cidr_block: 10.10.0.0/16
 aws_region: us-west-2
+
+
+#subnets info
+public_subnet_1_cidr: "10.0.1.0"
+public_subnet_1_cidr: "10.0.2.0"
