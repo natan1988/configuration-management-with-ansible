@@ -15,7 +15,8 @@
     register: my_vpc
 
   - name : set vpc id 
-    set_fact: my_vpc.vpc.id
+    set_fact: 
+      vpc_id : "{{my_vpc.vpc.id}}"
   
 
 
@@ -30,7 +31,12 @@
       region: "{{aws_region}}"    
       resource_tags:
         Name: "public subnet 1"
-    register: my_public_subnet_az1     
+    register: my_public_subnet_az1 
+
+
+  
+  
+            
 
   
 
