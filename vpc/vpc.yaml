@@ -115,7 +115,7 @@
   - name: create sg 
     ec2_group: 
       name: sg 
-      state: present
+      description: sg with rule desc
       vpc_id: my_vpc.vpc.id
       region: "{{aws_region}}" 
       rules:
@@ -124,7 +124,8 @@
           - 80
           - 22
           cidr_ip: 0.0.0.0/0
-          rule_desc: allow all on port 80 , 22  
+          rule_desc: allow 80 and 22
+          
 
 
 
