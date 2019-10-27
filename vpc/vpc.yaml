@@ -43,7 +43,7 @@
 
   - name: ss
     debug:
-      msg: my_public_subnet_az1.subnet.id    
+      msg: "{{my_public_subnet_az1.subnet.id}}"    
   
             
 
