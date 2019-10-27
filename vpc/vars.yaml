@@ -11,9 +11,3 @@ vpc_id: my_vpc.vpc.id
 private_subnet_1_cidr: 10.10.4.0/24
 private_subnet_2_cidr: 10.10.5.0/24
 private_subnet_3_cidr: 10.10.6.0/24
-my_public_subnet1_id: my_public_subnet1.subnet.id
-my_public_subnet2_id: my_public_subnet2.subnet.id
-my_public_subnet3_id: my_public_subnet3.subnet.id
-my_private_subnet1_id: my_private_subnet1.subnet.id
-my_private_subnet2_id: my_private_subnet2.subnet.id
-my_private_subnet3_id: my_private_subnet3.subnet.id

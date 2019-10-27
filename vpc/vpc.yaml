@@ -29,14 +29,13 @@
       az: "{{aws_region}}a"
       region: "{{aws_region}}"    
       resource_tags:
-        Name: "public subnet1"
-    register: my_public_subnet1  
+        Name: "public subnet 1"
+    register: my_public_subnet_az1  
 
 
   - name: 
     set_fact:
-      my_public_subnet1_id: "{{my_public_subnet1.subnet.id}}"
-
+    public_subnet_az1_id: "{{ my_public_subnet_az1.subnet.id }}"
 
   - name: create pb subnet 2
     ec2_vpc_subnet:
@@ -45,12 +44,14 @@
       az: "{{aws_region}}b"
       region: "{{aws_region}}"
       resource_tags:
-        Name: "public subnet2" 
-    register: my_public_subnet2
+        Name: "public subnet 2" 
+    register: my_public_subnet_az2
 
   - name: 
     set_fact:
-      my_public_subnet2_id: "{{my_public_subnet2.subnet.id}}" 
+    public_subnet_az2_id: "{{ my_public_subnet_az2.subnet.id }}"
+
+
 
   - name: create pb subnet 3
     ec2_vpc_subnet: 
@@ -60,12 +61,11 @@
       region: "{{aws_region}}"
       resource_tags: 
         Name: "public subnet3"
-    register: my_public_subnet3
+    register: my_public_subnet_az3
 
   - name: 
     set_fact:
-      my_public_subnet3_id: "{{my_public_subnet3.subnet.id}}"  
-
+    public_subnet_az3_id: "{{ my_public_subnet_az3.subnet.id }}"
 
 
 
@@ -78,12 +78,14 @@
       region: "{{aws_region}}"    
       resource_tags:
         Name: "private subnet1"
-    register: my_private_subnet1  
+    register: my_private_subnet_az1
+  
 
 
   - name: 
     set_fact:
-      my_private_subnet1_id: "{{my_private_subnet1.subnet.id}}"
+      private_subnet_az1_id: "{{ my_private_subnet_az1.subnet.id }}"
+
 
 
   - name: create private subnet 2
@@ -94,11 +96,11 @@
       region: "{{aws_region}}"
       resource_tags:
         Name: "private subnet2" 
-    register: my_private_subnet2
+    register: my_private_subnet_az2
 
   - name: 
     set_fact:
-      my_private_subnet2_id: "{{my_private_subnet2.subnet.id}}" 
+      private_subnet_az2_id: "{{ my_private_subnet_az2.subnet.id }}" 
 
   - name: create private subnet 3
     ec2_vpc_subnet: 
@@ -108,11 +110,11 @@
       region: "{{aws_region}}"
       resources_tags: 
         Name: "private subnet3"
-    register: my_private_subnet3
+    register: my_private_subnet_az3
 
   - name: 
     set_fact:
-      my_private_subnet3_id: "{{my_private_subnet3.subnet.id}}"  
+      private_subnet_az3_id: "{{ my_private_subnet_az3.subnet.id }}"  
 
 
 
