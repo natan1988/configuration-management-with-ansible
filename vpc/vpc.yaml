@@ -34,6 +34,12 @@
     register: my_public_subnet_az1 
 
 
+
+  - name: set subnet id
+    set_fact:
+      subnet_id: my_public_subnet_az1.subnet.id 
+
+
   
   
             
