@@ -6,17 +6,18 @@
   become: false
   tasks: 
   - include_vars: variables.yaml
-  - name: create vpc
-    ec2_vpc_net:
-      name: "{{ vpc_name }}"
-      cidr_block: "{{ vpc_cidr_block }}"
-      region: "{{ aws_region }}"
-      state: "present"
-    register: my_vpc
+  - name:               Create VPC
+  ec2_vpc_net:
+    name:             "{{ vpc_name }}"
+    cidr_block:       "{{ vpc_cidr_block }}"
+    region:           "{{ aws_region }}"
+    state:            "present"
+  register: my_vpc
 
-  - name : set vpc id 
-    set_fact: 
-      vpc_id: "{{my_vpc.vpc.id}}"
+- name:               Set VPC ID in variable
+  set_fact:
+    vpc_id:           "{{ my_vpc.vpc.id }}"
+
   
 
 
