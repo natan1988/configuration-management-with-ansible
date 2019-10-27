@@ -15,7 +15,7 @@
     register: my_vpc
 
   - name : set vpc id 
-    set_fact: "{{my_vpc.vpc.id}}"
+    set_fact: my_vpc.vpc.id
   
 
 
