@@ -116,7 +116,7 @@
     ec2_group: 
       name: sg 
       vpc_id: my_vpc.vpc.id
-      region: "{{region}}" 
+      region: "{{aws_region}}" 
       rules:
         proto: tcp
         ports:
