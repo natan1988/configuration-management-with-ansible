@@ -35,7 +35,7 @@
 
   - name: 
     set_fact:
-    vpc_subnet_id: "{{ my_public_subnet_az1.vpc.subnet.id }}"
+    subnet_ids: "{{ my_public_subnet_az1.subnet.ids }}"
 
   - name: create pb subnet 2
     ec2_vpc_subnet:
@@ -49,7 +49,7 @@
 
   - name: 
     set_fact:
-    vpc_subnet_id: "{{ my_public_subnet_az2.vpc.subnet.id }}"
+    subnet_ids: "{{ my_public_subnet_az2.subnet.ids }}"
 
 
 
@@ -65,7 +65,7 @@
 
   - name: 
     set_fact:
-    vpc_subnet_id: "{{ my_public_subnet_az3.vpc.subnet.id }}"
+    subnet_ids: "{{ my_public_subnet_az3.subnet.ids }}"
 
 
 
