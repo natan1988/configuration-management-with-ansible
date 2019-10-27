@@ -15,8 +15,8 @@
     register: my_vpc
 
   - name:  set VPC ID
-    set_fact:
-      vpc_id: "{{my_vpc.vpc.id}}"
+    debug:
+      var: "{{my_vpc.vpc.id}}"
 
 
 
