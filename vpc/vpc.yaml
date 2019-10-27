@@ -71,6 +71,13 @@
 
 
 
+  - name: set subnet id
+    set_fact:
+      subnet_id: my_public_subnet_az3.subnet.id
+  
+
+
+
 
 
   - name: Create Private subnet 1
@@ -85,7 +92,9 @@
     register: my_private_subnet_az1
   
 
-
+  - name: set sub id
+    set_fact: 
+      subnet_id: my_private_subnet_az1.subnet.id
 
 
 
@@ -99,6 +108,12 @@
       resource_tags:
         Name: "private subnet2" 
     register: my_private_subnet_az2
+
+
+
+  - name: set sub id
+    set_fact: 
+      subnet_id: my_private_subnet_az2.subnet.id  
 
  
 
@@ -114,6 +129,8 @@
 
 
       
-
+  - name: set sub id
+    set_fact: 
+      subnet_id: my_private_subnet_az3.subnet.id
 
 
