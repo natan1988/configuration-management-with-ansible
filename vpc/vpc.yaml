@@ -83,7 +83,7 @@
 
   - name: 
     set_fact:
-      public_subnet_id: "my_private_subnet1.subnet.id}}"
+      private_subnet_id: "my_private_subnet1.subnet.id}}"
 
 
   - name: create private subnet 2
@@ -98,7 +98,7 @@
 
   - name: 
     set_fact:
-      public_subnet_id: "my_private_subnet2.subnet.id}}" 
+      private_subnet_id: "my_private_subnet2.subnet.id}}" 
 
   - name: create private subnet 3
     ec2_vpc_subnet: 
@@ -112,7 +112,7 @@
 
   - name: 
     set_fact:
-      public_subnet_id: "my_private_subnet3.subnet.id}}"  
+      private_subnet_id: "my_private_subnet3.subnet.id}}"  
 
 
 
