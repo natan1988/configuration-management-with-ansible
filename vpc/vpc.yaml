@@ -114,8 +114,8 @@
 
   - name: create sg 
     ec2_group: 
-      name: sg allow 22 and 80
-      vpc_id: my_vpc.vpc.id
+      name: sg 
+      description: allow 80 and 22
       region: "{{aws_region}}" 
       rules:
         - proto: tcp
