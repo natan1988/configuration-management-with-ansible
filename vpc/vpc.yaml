@@ -58,7 +58,7 @@
       cidr: "{{public_subnet_3_cidr}}"
       az: "{{aws_region}}c"
       region: "{{aws_region}}"
-      resources_tags: 
+      resource_tags: 
         Name: "public subnet3"
     register: my_public_subnet3
 
