@@ -16,8 +16,7 @@
 
   - name:               Set VPC ID in variable
     set_fact:
-      vpc_id:           "{{ my_vpc.vpc.id }}"
-
+      vpc_id: my_vpc.vpc.id 
   
 
 
