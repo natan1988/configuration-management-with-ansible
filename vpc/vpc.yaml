@@ -38,7 +38,7 @@
       public_subnet_id: "my_public_subnet1.subnet.id}}"
 
 
-  - nameprivatecreate pb subnet 2
+  - name: privatecreate pb subnet 2
     ec2_vpc_subnet:
       vpc_id: "{{my_vpc.vpc.id}}" 
       cidr: "{{public_subnet_2_cidr}}"
