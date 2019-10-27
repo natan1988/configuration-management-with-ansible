@@ -103,7 +103,7 @@
       cidr: "{{private_subnet_3_cidr}}"
       az: "{{aws_region}}c"
       region: "{{aws_region}}"
-      resources_tags: 
+      resource_tags: 
         Name: "private subnet3"
     register: my_private_subnet_az3
 
