@@ -7,7 +7,7 @@ aws_region: us-west-2
 public_subnet_1_cidr: 10.10.1.0/24
 public_subnet_2_cidr: 10.10.2.0/24
 public_subnet_3_cidr: 10.10.3.0/24
-vpc_id: my_vpc.vpc.id
+vpc_id: "{{my_vpc.vpc.id}}"
 private_subnet_1_cidr: 10.10.4.0/24
 private_subnet_2_cidr: 10.10.5.0/24
 private_subnet_3_cidr: 10.10.6.0/24
