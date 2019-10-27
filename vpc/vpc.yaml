@@ -118,11 +118,11 @@
       vpc_id: my_vpc.vpc.id
       region: "{{aws_region}}" 
       rules:
-        proto: tcp
-        ports:
-          - 80
-          - 22
-        cidr_ip: 0.0.0.0/0 
+        - proto: tcp
+          ports:
+            - 80
+            - 22
+          cidr_ip: 0.0.0.0/0 
 
 
 
