@@ -18,10 +18,6 @@
     set_fact:
       vpc_id: my_vpc.vpc.id 
   
-
-
-
-
   - name: Create Pb subnet 1
     ec2_vpc_subnet:
       state: "present"
@@ -33,15 +29,9 @@
         Name: "public subnet 1"
     register: my_public_subnet_az1 
 
-
-
   - name: set subnet id
     set_fact:
       subnet_id: my_public_subnet_az1.subnet.id 
-
- 
-  
-          
 
   - name: create pb subnet 2
     ec2_vpc_subnet:
@@ -52,7 +42,6 @@
       resource_tags:
         Name: "public subnet 2" 
     register: my_public_subnet_az2
-
 
 
   - name: set subnet id
@@ -69,17 +58,10 @@
         Name: "public subnet3"
     register: my_public_subnet_az3
 
-
-
   - name: set subnet id
     set_fact:
       subnet_id: my_public_subnet_az3.subnet.id
   
-
-
-
-
-
   - name: Create Private subnet 1
     ec2_vpc_subnet:
       state: "present"
@@ -96,9 +78,6 @@
     set_fact: 
       subnet_id: my_private_subnet_az1.subnet.id
 
-
-
-
   - name: create private subnet 2
     ec2_vpc_subnet:
       vpc_id: my_vpc.vpc.id
@@ -109,13 +88,10 @@
         Name: "private subnet2" 
     register: my_private_subnet_az2
 
-
-
   - name: set sub id
     set_fact: 
       subnet_id: my_private_subnet_az2.subnet.id  
 
- 
 
   - name: create private subnet 3
     ec2_vpc_subnet: 
@@ -132,5 +108,22 @@
   - name: set sub id
     set_fact: 
       subnet_id: my_private_subnet_az3.subnet.id
+
+
+
+
+  - name: create sg 
+    ec2_group: 
+      name: sg 
+      vpc_id: my_vpc.vpc.id
+      region: "{{region}}" 
+      rules:
+        proto: tcp
+        ports:
+          - 80
+          - 22
+        cidr_ip: 0.0.0.0/0 
+
+
 
 
