@@ -5,7 +5,7 @@
   gather_facts: false
   become: false
   tasks: 
-  - include_vars: vars.yaml
+  - include_vars: variables.yaml
   - name: create vpc
     ec2_vpc_net:
       name: "{{ vpc_name }}"
