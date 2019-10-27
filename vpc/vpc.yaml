@@ -14,7 +14,8 @@
       state: "present"
     register: my_vpc
 
-  - set_fact: "{{my_vpc.vpc.id}}"
+  - name : set vpc id 
+    set_fact: "{{my_vpc.vpc.id}}"
   
 
 
