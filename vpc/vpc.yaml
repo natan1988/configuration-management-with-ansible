@@ -14,9 +14,8 @@
       state: "present"
     register: my_vpc
 
-  - name:  set VPC ID
-      debug:
-        var: "{{my_vpc.vpc.id}}"
+    debug:
+      var: "{{my_vpc.vpc.id}}"
 
 
 
@@ -31,9 +30,7 @@
       resource_tags:
         Name: "public subnet 1"
     register: my_public_subnet1  
-
-
-  - name: debug my pb subnet  
+  
     debug: 
       var: my_public_subnet1.subnet.id     
 
