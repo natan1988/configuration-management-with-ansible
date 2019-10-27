@@ -16,7 +16,7 @@
 
   - name: set vpc_id
     set_fact:
-      vpc_id: "{{ my_vpc.vpc.id }}"
+      vpc_id: "{{my_vpc.vpc.id}}"
   
 
 
