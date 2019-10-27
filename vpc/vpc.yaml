@@ -34,8 +34,8 @@
 
 
   - name: debug my pb subnet  
-      debug: 
-        var: "{{my_public_subnet1.subnet_id}}"     
+      - debug: 
+          var: "{{my_public_subnet1.subnet_id}}"     
 
   
 
