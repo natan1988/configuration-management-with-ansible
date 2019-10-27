@@ -54,7 +54,7 @@
 
   - name: create pb subnet 3
     ec2_vpc_subnet: 
-      vpc_id: "{{my_vpc.vpv.id}}"
+      vpc_id: "{{my_vpc.vpc.id}}"
       cidr: "{{public_subnet_3_cidr}}"
       az: "{{aws_region}}c"
       region: "{{aws_region}}"
