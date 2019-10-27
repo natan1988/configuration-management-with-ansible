@@ -14,3 +14,6 @@ private_subnet_3_cidr: 10.10.6.0/24
 subnet_id: my_public_subnet_az1.subnet.id 
 subnet_id: my_public_subnet_az2.subnet.id 
 subnet_id: my_public_subnet_az3.subnet.id 
+subnet_id: my_private_subnet_az1.subnet.id 
+subnet_id: my_private_subnet_az2.subnet.id 
+subnet_id: my_private_subnet_az3.subnet.id 

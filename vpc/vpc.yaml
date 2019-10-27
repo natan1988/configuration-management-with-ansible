@@ -84,7 +84,7 @@
 
   - name: 
     set_fact:
-      private_subnet_az1_id: "{{ my_private_subnet_az1.subnet.id }}"
+      subnet_id: "{{ my_private_subnet_az1.subnet.id }}"
 
 
 
@@ -100,7 +100,7 @@
 
   - name: 
     set_fact:
-      private_subnet_az2_id: "{{ my_private_subnet_az2.subnet.id }}" 
+      subnet_id: "{{ my_private_subnet_az2.subnet.id }}" 
 
   - name: create private subnet 3
     ec2_vpc_subnet: 
@@ -114,7 +114,7 @@
 
   - name: 
     set_fact:
-      private_subnet_az3_id: "{{ my_private_subnet_az3.subnet.id }}"  
+      subnet_id: "{{ my_private_subnet_az3.subnet.id }}"  
 
 
 
