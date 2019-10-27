@@ -40,7 +40,10 @@
       subnet_id: my_public_subnet_az1.subnet.id 
 
 
-  
+
+  - name: ss
+    debug:
+      msg: my_public_subnet_az1.subnet.id    
   
             
 
