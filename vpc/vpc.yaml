@@ -14,8 +14,7 @@
       state: "present"
     register: my_vpc
 
-    debug:
-      var: "{{my_vpc.vpc.id}}"
+    debug: var="{{my_vpc.vpc.id}}"
 
 
 
@@ -31,8 +30,8 @@
         Name: "public subnet 1"
     register: my_public_subnet1  
   
-    debug: 
-      var: my_public_subnet1.subnet.id     
+  - name: debug 
+    debug: var=my_public_subnet1.subnet.id     
 
   
 
