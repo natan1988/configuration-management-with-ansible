@@ -4,7 +4,7 @@ aws_region: us-west-2
 
 
 #subnets info
-vpc_id: my_vpc.vpc_id
+vpc_id: my_vpc.vpc.id
 public_subnet_1_cidr: 10.10.1.0/24
 public_subnet_2_cidr: 10.10.2.0/24
 public_subnet_3_cidr: 10.10.3.0/24
