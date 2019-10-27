@@ -14,7 +14,10 @@
       state: "present"
     register: my_vpc
 
-    debug: var="{{my_vpc.vpc.id}}"
+  - name: "set fact: VPC ID"
+    set_fact:
+      vpc_id: "{{ my_vpc.vpc.id }}"
+  
 
 
 
@@ -28,10 +31,7 @@
       region: "{{aws_region}}"    
       resource_tags:
         Name: "public subnet 1"
-    register: my_public_subnet1  
-  
-  - name: debug 
-    debug: var=my_public_subnet1.subnet.id     
+    register: my_public_subnet_az1     
 
   
 
@@ -45,9 +45,7 @@
         Name: "public subnet 2" 
     register: my_public_subnet_az2
 
-  - name: set pb id for 2 
-    set_fact:
-      subnet_id: "{{ my_public_subnet_az2.subnet.id }}"
+
 
 
 
@@ -61,9 +59,7 @@
         Name: "public subnet3"
     register: my_public_subnet_az3
 
-  - name: set pb id for 3
-    set_fact:
-      subnet_id: "{{ my_public_subnet_az3.subnet.id }}"
+
 
 
 
@@ -80,9 +76,7 @@
   
 
 
-  - name: 
-    set_fact:
-      subnet_id: "{{ my_private_subnet_az1.subnet.id }}"
+
 
 
 
@@ -96,9 +90,7 @@
         Name: "private subnet2" 
     register: my_private_subnet_az2
 
-  - name: 
-    set_fact:
-      subnet_id: "{{ my_private_subnet_az2.subnet.id }}" 
+ 
 
   - name: create private subnet 3
     ec2_vpc_subnet: 
@@ -110,9 +102,8 @@
         Name: "private subnet3"
     register: my_private_subnet_az3
 
-  - name: 
-    set_fact:
-      subnet_id: "{{ my_private_subnet_az3.subnet.id }}"  
+
+      
 
 
 
