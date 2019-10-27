@@ -16,7 +16,7 @@
 
   - name:  set VPC ID
     debug:
-      var: "{{my_vpc.vpc.id}}"
+      var: my_vpc.vpc.id
 
 
 
@@ -34,8 +34,8 @@
 
 
   - name: debug my pb subnet  
-      - debug: 
-          var: "{{my_public_subnet1.subnet_id}}"     
+    debug: 
+      var: my_public_subnet1.subnet.id     
 
   
 
