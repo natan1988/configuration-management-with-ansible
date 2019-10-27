@@ -39,15 +39,9 @@
     set_fact:
       subnet_id: my_public_subnet_az1.subnet.id 
 
-
-
-  - name: ss
-    debug:
-      msg: "{{my_public_subnet_az1.subnet.id}}"    
+ 
   
-            
-
-  
+          
 
   - name: create pb subnet 2
     ec2_vpc_subnet:
@@ -61,7 +55,9 @@
 
 
 
-
+  - name: set subnet id
+    set_fact:
+      subnet_id: my_public_subnet_az2.subnet.id
 
   - name: create pb subnet 3
     ec2_vpc_subnet: 
