@@ -16,7 +16,7 @@
 
   - name:  set VPC ID
     debug:
-      var: my_vpc.vpc.id
+      var: "{{my_vpc.vpc.id}}"
 
 
 
