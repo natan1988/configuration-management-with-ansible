@@ -155,9 +155,6 @@
         Type: webserver
 
 
-
-
-
 - name: install wordpress
   hosts: webserver
   become: yes
