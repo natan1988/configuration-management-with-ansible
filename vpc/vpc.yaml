@@ -135,8 +135,24 @@
       vpc_subnet_id: my_public_subnet_az1.subnet.id
       assign_public_ip: yes
       region: "{{aws_region}}"  
-    register: instances        
+    register: instances  
 
 
 
+  - name: set instance id
+    set_fact: 
+      instance_id: instances.instance.id
 
+
+   
+  - name: add tag to instances
+    ec2_tag:
+      resource: instances.instance.id
+      region: "{{aws_region}}"
+      state: present
+    args:
+      tags:
+        Type: webserver
+          
+
+    
