@@ -11,13 +11,11 @@
 
 
   
-  - name: Set authorized key for user ubuntu copying it from current user
-    authorized_key:
-      user: "{{item.usernames}}"
-      state: present
-      key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub') }}"
+ 
 
 
 
 
-  
+  - name: placing ssh
+    authorized_key: user="{{item.username}}" key="{{ lookup('file', './keyfiles/authorized_key.{{item.username}}.pub')}} " 
+    with_items: "{{ users }}"
