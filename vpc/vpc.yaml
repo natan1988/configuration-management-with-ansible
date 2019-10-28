@@ -153,6 +153,39 @@
     args:
       tags:
         Type: webserver
-          
+
+
+
+
+
+- name: install wordpress
+  hosts: webserver
+  become: yes
+  become_method: sudo 
+  tasks: 
+    - name: download wordpress
+      get_url: 
+        url: "https://wordpress.org/wordpress-5.2.3.zip"
+        dest: /tmp/
+    - name: install unzip
+      package:
+        name: unzip
+        state: present
+    - name: unzip
+      unarchive:
+        src: /tmp/wordpress-5.2.3.zip
+        dest: /tmp
+        remote_src: true
+      ignore_errors: true  
+      register: wordpress_image
+
+      
+
+
+    - name: image with wordpress
+      set_fact: 
+        image: wordpress_image.image 
+    
+
 
     
