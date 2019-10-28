@@ -126,14 +126,15 @@
           
 
 
-   - ec2:
-        key_name: "{{key_name}}"
-        instance_type: "{{instance_type}}"
-        image: "{{image}}"
-        count: "{{count}}"
-        vpc_subnet_id: my_public_subnet_az1.subnet.id
-        assign_public_ip: yes
-        region: "{{aws_region}}"        
+   - name: creating image
+       ec2:
+         key_name: "{{key_name}}"
+         instance_type: "{{instance_type}}"
+         image: "{{image}}"
+         count: "{{count}}"
+         vpc_subnet_id: my_public_subnet_az1.subnet.id
+         assign_public_ip: yes
+         region: "{{aws_region}}"        
 
 
 
