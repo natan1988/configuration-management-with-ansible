@@ -1,6 +1,6 @@
 ---
 - name: Playbook for packages
-  hosts: bastion_host
+  hosts: "{{host}}"
   become: yes
   become_method: sudo
   roles:
