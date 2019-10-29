@@ -2,7 +2,7 @@
 # tasks file for package
 ---
 - name: Playbook for tasks
-  hosts: bastion_host
+  hosts: "{{host}}"
   become: yes
   become_method: sudo
   tasks:
