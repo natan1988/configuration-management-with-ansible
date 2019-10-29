@@ -1,0 +1,7 @@
+---
+- name: Playbook for packages
+  hosts: bastion_host
+  become: yes
+  become_method: sudo
+  roles:
+    - gener.key
