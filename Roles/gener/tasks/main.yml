@@ -1,28 +1,22 @@
 ---
 # tasks file for package
----
-- name: Playbook for tasks
-  hosts: "{{host}}"
-  become: yes
-  become_method: sudo
-  tasks:
-    - name:  generate key 
-      user:
-        name: "{{item}}"
-        generate_ssh_key: yes
-      with_items:
-        - ulan
-        - miki
-        - murat
-        - sera
-        - mahsuda
-        - anara
-        - ali
-        - mustafa
-        - caglar
-        - talant
-        - max
-        - khuslen
-        - tunji
-        - syed
-        - ahmed
+- name:  generate key 
+  user:
+    name: "{{item}}"
+    generate_ssh_key: yes
+  with_items:
+    - ulan
+    - miki
+    - murat
+    - sera
+    - mahsuda
+    - anara
+    - ali
+    - mustafa
+    - caglar
+    - talant
+    - max
+    - khuslen
+    - tunji
+    - syed
+    - ahmed
