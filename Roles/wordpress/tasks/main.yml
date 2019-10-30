@@ -14,8 +14,8 @@
     - php 
     - php-mysql
     - php-fpm
- ignore_errors: true
- notify: Restart_httpd
+  ignore_errors: true
+  notify: Restart_httpd
 
 - name: Download wordpress package
   get_url:
