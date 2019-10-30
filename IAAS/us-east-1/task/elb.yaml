@@ -16,5 +16,4 @@
           instance_port: 80
       tags:
         Name: "New ELB"
-        stack: "production"
-        client: "Bob"
+        
