@@ -1,0 +1,20 @@
+---
+- name: Playbook for security groups
+  hosts: localhost
+  tasks:
+    - name: createa sg 1
+      ec2_group:
+        name: SecGroupforVPC
+        description: sg group for 1 vpc
+        vpc_id: vpc-01582647ce316875e
+        region: us-east-1
+        rules:
+          - proto: tcp
+            ports:
+            - 80
+            cidr_ip: 0.0.0.0/0
+          - proto: tcp
+            ports:
+            - 22
+            cidr_ip: 0.0.0.0/0            
+            
