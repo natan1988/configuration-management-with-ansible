@@ -11,7 +11,7 @@
 
 
     - name: install repo
-      commmand: wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker.repo
+      command: wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker.repo
 
 
 
@@ -25,5 +25,7 @@
     - name: start adn enable docker-swarm
       command: "{{item}}" 
       with_items: 
+        - wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker.repo
+        - yum install docker-ce -y
         - systemctl start docker
         - systemctl enable docker     
