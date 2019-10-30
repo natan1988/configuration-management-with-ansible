@@ -19,13 +19,8 @@
   include: private_subnet.yaml
 
 
-
-
-
 - name: create public
   include: public_subnet.yaml 
-
-
 
 
 - name: add igw
@@ -38,3 +33,6 @@
 
 - name: private rt
   import_playbook: rt_private.yaml  
+
+- name: create autoscale
+  import_playbook: asg.yaml  
