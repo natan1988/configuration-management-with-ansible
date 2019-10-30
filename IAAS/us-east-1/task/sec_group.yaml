@@ -1,6 +1,7 @@
 ---
 - name: Playbook for security groups
   hosts: localhost
+  gather_facts: no
   tasks:
     - name: createa sg 1
       ec2_group:

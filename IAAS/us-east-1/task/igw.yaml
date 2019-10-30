@@ -1,6 +1,7 @@
 ---
 - name: Playbook for vpc
   hosts: localhost
+  gather_facts: no
   tasks:
     - name: create igw
       ec2_vpc_igw:

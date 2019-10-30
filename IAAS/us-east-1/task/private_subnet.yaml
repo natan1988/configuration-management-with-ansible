@@ -1,6 +1,7 @@
 ---
 - name: Playbook for vpc
   hosts: localhost
+  gather_facts: no
   tasks:
     - name: Create private sub 1
       ec2_vpc_subnet:
