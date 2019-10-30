@@ -1,5 +1,5 @@
 ---
-- name: Playbook for security groups
+- name: Playbook for vpc
   hosts: localhost
   tasks:
     - name: VPC for class
