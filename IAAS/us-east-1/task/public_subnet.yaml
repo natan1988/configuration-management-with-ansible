@@ -22,7 +22,7 @@
           Name: web Subnet2
       register: web_subnet2
 
-     - name: Create Public sub 3
+    - name: Create Public sub 3
       ec2_vpc_subnet:
         state: present
         vpc_id: vpc-01582647ce316875e
