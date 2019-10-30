@@ -26,13 +26,13 @@
 
 
 
-    - name: docker init
-      hosts: manager
-      become: yes
-      become_method: sudo 
-      tasks: 
-        - name: init docker swarm
-          command: docker swarm init --advertise-addr 54.244.204.126
+- name: docker init
+  hosts: manager
+  become: yes
+  become_method: sudo 
+  tasks: 
+    - name: init docker swarm
+      command: docker swarm init --advertise-addr 54.244.204.126
       register: dockermanager
 
 
