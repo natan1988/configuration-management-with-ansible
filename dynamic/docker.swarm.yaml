@@ -10,7 +10,10 @@
         name: wget
         state: latest
 
-
+    - name: download repo 
+      get_url: 
+        url: wget https://download.docker.com/linux/centos/docker-ce.repo -O
+        dest: /etc/yum.repos.d/docker.repo
      
 
 
@@ -19,7 +22,6 @@
     - name: start adn enable docker-swarm
       command: "{{item}}" 
       with_items: 
-        - wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker.repo
         - yum install docker-ce -y
         - systemctl start docker
         - systemctl enable docker    
