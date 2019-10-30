@@ -1,5 +1,5 @@
 ---
-- name: Playbook for vpc
+- name: Playbook for elb
   hosts: localhost
   gather_facts: no
   tasks:

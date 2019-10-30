@@ -1,0 +1,29 @@
+---
+- name: install docker swarm 
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: install docker swarm
+      yum:
+        name: wget
+        state: latest
+
+
+    - name: install repo
+      commmand: wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker.repo
+
+
+
+    - name: install docker
+      yum:
+        name: docker-ce  
+
+
+
+
+    - name: start adn enable docker-swarm
+      command: "{{item}}" 
+      with_items: 
+        - systemctl start docker
+        - systemctl enable docker     
