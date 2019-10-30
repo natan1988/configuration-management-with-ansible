@@ -22,4 +22,10 @@
 
 
 - name: create public
-  include: public_subnet.yaml     
+  include: public_subnet.yaml 
+
+
+
+
+- name: add igw
+  import_playbook: igw.yaml      
