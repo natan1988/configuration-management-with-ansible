@@ -8,7 +8,7 @@
       name: "New ELB"
       state: present
       region: us-east-1
-      subnets: ['subnet-0605f5368971ae316', 'subnet-053c28d3a62453c5d', 'subnet-0e7193a289bee6f85']
+      subnets: ['subnet-0605f5368971ae316']
       security_groups_ids: sg-0987ad54b6fe1f65a
       listeners:
         - protocol: http
