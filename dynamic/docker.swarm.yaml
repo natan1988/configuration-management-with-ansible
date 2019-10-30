@@ -12,7 +12,7 @@
 
     - name: download repo 
       get_url: 
-        url: wget https://download.docker.com/linux/centos/docker-ce.repo -O
+        url: "https://download.docker.com/linux/centos/docker-ce.repo -O"
         dest: /etc/yum.repos.d/docker.repo
      
 
