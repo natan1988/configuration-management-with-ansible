@@ -30,3 +30,11 @@
 
 - name: add igw
   import_playbook: igw.yaml      
+
+
+
+- name: add pub rt
+  import_playbook: rt_public.yaml
+
+- name: private rt
+  import_playbook: rt_private.yaml  

@@ -1,0 +1,17 @@
+---
+- name: Playbook for route tablefor private
+  hosts: localhost
+  tasks:
+    - name: Set up private subnet route table
+      ec2_vpc_route_table:
+        vpc_id: vpc-01582647ce316875e
+        region: us-east-1
+      tags:
+        Name: private
+      subnets:
+        - subnet-06becc6c4ef480e39
+        - subnet-0441e276e94336d75
+        - subnet-00c355d4c8c6da30f
+      routes:
+        - dest: 10.0.0.0/16
+      register: private_route_table
