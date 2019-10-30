@@ -3,6 +3,7 @@
   hosts: all
   become: yes
   become_method: sudo
+  gather_facts: no 
   tasks:
     - name: install docker swarm
       yum:
@@ -10,14 +11,7 @@
         state: latest
 
 
-    - name: install repo
-      command: wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker.repo
-
-
-
-    - name: install docker
-      yum:
-        name: docker-ce  
+     
 
 
 
@@ -28,4 +22,19 @@
         - wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker.repo
         - yum install docker-ce -y
         - systemctl start docker
-        - systemctl enable docker     
+        - systemctl enable docker    
+
+
+
+- name: docker init
+  hosts: manager
+  become: yes
+  become_method: sudo 
+  tasks: 
+    - name: init docker swarm
+      command: docker swarm init --advertise-addr 54.244.204.126
+  register: dockermanager
+
+
+
+           
