@@ -6,6 +6,7 @@
       ec2_vpc_subnet:
         state: present
         vpc_id: vpc-01582647ce316875e
+        region: us-east-1
         cidr: 10.0.1.0/24
         resource_tags:
           Name: Database Subnet1
@@ -15,6 +16,7 @@
       ec2_vpc_subnet:
         state: present
         vpc_id: vpc-01582647ce316875e
+        region: us-east-1
         cidr: 10.0.2.0/24
         resource_tags:
           Name: Database Subnet2
@@ -24,6 +26,7 @@
       ec2_vpc_subnet:
         state: present
         vpc_id: vpc-01582647ce316875e
+        region: us-east-1
         cidr: 10.0.3.0/24
         resource_tags:
           Name: Database Subnet3
