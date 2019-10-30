@@ -4,7 +4,7 @@
   tasks:
     - name: create igw
       ec2_vpc_igw:
-        vpc_id: vpc-abcdefgh
+        vpc_id: vpc-01582647ce316875e
         region: us-east-1
         state: present
       register: igw
