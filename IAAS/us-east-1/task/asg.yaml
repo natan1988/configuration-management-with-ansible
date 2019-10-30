@@ -25,3 +25,6 @@
         desired_capacity: 3
         vpc_zone_identifier: [ 'subnet-0605f5368971ae316', 'subnet-053c28d3a62453c5d', 'subnet-0e7193a289bee6f85' ]
         region: us-east-1
+        tags:
+          - environment: production
+            propagate_at_launch: no
