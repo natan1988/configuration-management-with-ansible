@@ -24,11 +24,11 @@
 
      - name: Create private sub 3
        ec2_vpc_subnet:
-        state: present
-        vpc_id: vpc-01582647ce316875e
-        region: us-east-1
-        cidr: 10.0.3.0/24
-        resource_tags:
-          Name: Database Subnet3
-      register: database_subnet3     
+         state: present
+         vpc_id: vpc-01582647ce316875e
+         region: us-east-1
+         cidr: 10.0.3.0/24
+         resource_tags:
+           Name: Database Subnet3
+       register: database_subnet3     
 
