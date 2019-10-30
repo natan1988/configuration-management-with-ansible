@@ -35,6 +35,8 @@
       command: docker swarm init --advertise-addr 54.244.204.126
       register: dockermanager
 
+    - debug: var=dockermanager.stdout_lines  
+
 
 
            
