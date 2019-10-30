@@ -1,0 +1,20 @@
+---
+- name: Playbook for vpc
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    local_action:
+      module: ec2_elb_lb
+      name: "New ELB"
+      state: present
+      region: us-east-1
+      subnets: ['subnet-0605f5368971ae316', 'subnet-053c28d3a62453c5d', 'subnet-0e7193a289bee6f85']
+      security_groups_ids: sg-0987ad54b6fe1f65a
+      listeners:
+        - protocol: http
+          load_balancer_port: 80
+          instance_port: 80
+      tags:
+        Name: "New ELB"
+        stack: "production"
+        client: "Bob"

@@ -36,3 +36,6 @@
 
 - name: create autoscale
   import_playbook: asg.yaml  
+
+- name: new elb
+  import_playbook: elb.yaml
