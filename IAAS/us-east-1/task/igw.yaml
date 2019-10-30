@@ -1,0 +1,10 @@
+---
+- name: Playbook for vpc
+  hosts: localhost
+  tasks:
+    - name: create igw
+      ec2_vpc_igw:
+        vpc_id: vpc-abcdefgh
+        region: us-east-1
+        state: present
+      register: igw
