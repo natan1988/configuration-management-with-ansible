@@ -29,7 +29,7 @@
 
 
 - name: docker init
-  hosts: manager
+  hosts: 34.211.251.199
   become: yes
   become_method: sudo 
   tasks: 
