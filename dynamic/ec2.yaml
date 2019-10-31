@@ -6,6 +6,8 @@
     - ec2:
         key_name: ansible
         instance_type: t2.micro
+        volumes:
+          delete_on_termination: true
         image: ami-0316487ff51aefd32
         instance_tags:
           Name: workers
@@ -18,6 +20,8 @@
     - ec2:
         key_name: ansible
         instance_type: t2.micro
+        volume:
+          delete_on_termination: true
         image: ami-0316487ff51aefd32
         instance_tags:
           Name: manager
