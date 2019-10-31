@@ -6,7 +6,7 @@
     - ec2:
         key_name: ansible
         instance_type: t2.micro
-        image: ami-0ff760d16d9497662 
+        image: ami-01159062b973a5185
         group_id: sg-0601a990ce3ebe152
         instance_tags:
           Name: workers
@@ -19,7 +19,7 @@
     - ec2:
         key_name: ansible
         instance_type: t2.micro
-        image: ami-0ff760d16d9497662
+        image: ami-01159062b973a5185
         group_id: sg-0601a990ce3ebe152
         instance_tags:
           Name: manager
