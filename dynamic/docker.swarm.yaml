@@ -6,7 +6,7 @@
   gather_facts: no 
   tasks:
     - name: install docker swarm
-      yum:
+      yum3:
         name: wget
         state: latest
 
