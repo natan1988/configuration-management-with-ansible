@@ -3,7 +3,7 @@
   hosts: localhost
   gather_facts: no
   tasks:
-    - ec2:
+    - ec2_instance:
         key_name: ansible
         instance_type: t2.micro
         image: ami-0316487ff51aefd32
@@ -16,7 +16,7 @@
         region: us-west-2
 
 
-    - ec2:
+    - ec2_instance:
         key_name: ansible
         instance_type: t2.micro
         image: ami-0316487ff51aefd32
