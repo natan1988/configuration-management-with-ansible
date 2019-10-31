@@ -3,11 +3,11 @@
   hosts: localhost
   gather_facts: no
   tasks:
-    - ec2_instance:
+    - ec2:
         key_name: ansible
         instance_type: t2.micro
         image: ami-0316487ff51aefd32
-        security_group: sg-0601a990ce3ebe152
+        group_id: sg-0601a990ce3ebe152
         instance_tags:
           Name: workers
         count: 2
@@ -16,11 +16,11 @@
         region: us-west-2
 
 
-    - ec2_instance:
+    - ec2:
         key_name: ansible
         instance_type: t2.micro
         image: ami-0316487ff51aefd32
-        security_group: sg-0601a990ce3ebe152
+        group_id: sg-0601a990ce3ebe152
         instance_tags:
           Name: manager
         count: 1
