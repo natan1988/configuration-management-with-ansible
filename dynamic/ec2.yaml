@@ -1,15 +1,27 @@
 ---
 - name: Playbook for provisioning
-  hosts: localhost
-  connection: local
+  hosts: all
   gather_facts: false
-  become: false
+  become: yes
+  become_method: sudo
   tasks:
     - ec2:
-        key_name: "{{key_name}}"
-        instance_type: "{{instance_type}}"
-        image: "{{image}}"
-        count: "{{count}}"
-        vpc_subnet_id: "{{vpc_subnet_id}}"
+        key_name: ansible
+        instance_type: t2.micro
+        image: ami-0316487ff51aefd32
+        group: workers
+        count: 2
+        vpc_subnet_id: vpc-3e8a3146
         assign_public_ip: yes
-        region: "{{region}}"
+        region: us-west-2
+
+
+    - ec2:
+        key_name: ansible
+        instance_type: t2.micro
+        image: ami-0316487ff51aefd32
+        group: manager
+        count: 1
+        vpc_subnet_id: vpc-3e8a3146
+        assign_public_ip: yes
+        region: us-west-2 
