@@ -27,6 +27,7 @@
 
 - name: docker init
   hosts: manager
+  remote_user: root
   become: yes
   become_method: sudo 
   tasks: 
