@@ -1,6 +1,6 @@
 ---
 - name: install docker swarm 
-  hosts: all
+  hosts: worker, manager
   become: yes
   become_method: sudo
   gather_facts: no 
