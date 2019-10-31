@@ -7,7 +7,8 @@
         key_name: ansible
         instance_type: t2.micro
         image: ami-0316487ff51aefd32
-        group: workers
+        instance_tags:
+          Name: workers
         count: 2
         vpc_subnet_id: subnet-022dca5f
         assign_public_ip: yes
@@ -18,7 +19,8 @@
         key_name: ansible
         instance_type: t2.micro
         image: ami-0316487ff51aefd32
-        group: manager
+        instance_tags:
+          Name: manager
         count: 1
         vpc_subnet_id: subnet-022dca5f 
         assign_public_ip: yes
