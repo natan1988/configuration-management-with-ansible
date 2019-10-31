@@ -28,7 +28,7 @@
 
 
 - name: docker init
-  hosts: "{{host}}"
+  hosts: manager
   become: yes
   become_method: sudo 
   tasks: 
