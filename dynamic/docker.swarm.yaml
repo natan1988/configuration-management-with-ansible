@@ -1,6 +1,6 @@
 ---
 - name: install docker swarm 
-  hosts: all
+  hosts: manager,worker
   become: yes
   become_method: sudo
   gather_facts: true
@@ -26,7 +26,7 @@
 
 
 - name: docker init
-  hosts: "{{host}}"
+  hosts: manager
   become: yes
   become_method: sudo 
   tasks: 
