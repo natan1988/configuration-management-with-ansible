@@ -27,7 +27,6 @@
         - systemctl enable docker    
 
 
-
 - name: docker init
   hosts: 34.211.251.199
   become: yes
