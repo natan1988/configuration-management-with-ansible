@@ -26,3 +26,6 @@
             cidr_ip: 0.0.0.0/0   
       register: SecGroup               
             
+    - name: output
+      debug: 
+        var: VPC1
