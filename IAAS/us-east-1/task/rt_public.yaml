@@ -12,7 +12,7 @@
 
     - name: Set up public subnet route table
       ec2_vpc_route_table:
-        vpc_id: "{{VPC1.vpcs[0].vpc_id}}"
+        vpc_id: "{{VPC1.vpcs[0].vpc_ids}}"
         region: us-east-1
         tags:
           Name: Public
