@@ -14,7 +14,7 @@
     - name: Create private sub 1
       ec2_vpc_subnet:
         state: present
-        vpc_id: "{{VPC1.vpcs[0].vpc_ids}}"
+        vpc_id: "{{VPC1.vpc[0].vpc_id}}"
         region: us-east-1
         cidr: 10.0.1.0/24
         resource_tags:
@@ -24,7 +24,7 @@
     - name: Create private 2
       ec2_vpc_subnet:
         state: present
-        vpc_id: "{{VPC1.vpcs[0].vpc_ids}}"
+        vpc_id: "{{VPC1.vpc[0].vpc_id}}"
         region: us-east-1
         cidr: 10.0.2.0/24
         resource_tags:
@@ -34,7 +34,7 @@
     - name: Create private sub 3
       ec2_vpc_subnet:
         state: present
-        vpc_id: "{{VPC1.vpcs[0].vpc_ids}}"
+        vpc_id: "{{VPC1.vpc[0].vpc_id}}"
         region: us-east-1
         cidr: 10.0.3.0/24
         resource_tags:

@@ -13,7 +13,7 @@
 
     - name: create igw
       ec2_vpc_igw:
-        vpc_id: "{{VPC1.vpcs[0].vpc_ids}}"
+        vpc_id: "{{VPC1.vpc[0].vpc_id}}"
         region: us-east-1
         state: present
       register: igw

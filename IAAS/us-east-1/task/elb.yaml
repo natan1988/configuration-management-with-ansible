@@ -16,7 +16,7 @@
         name: "NewELB"
         state: present
         region: us-east-1
-        subnets: [ "{{web_subnet1.subnet.ids}}" ]
+        subnets: [ "{{web_subnet1.subnet.id}}" ]
         security_groups_ids: "{{SecGroup.group_id}}"
         listeners:
           - protocol: http
