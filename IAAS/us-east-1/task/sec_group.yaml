@@ -10,8 +10,6 @@
           "tag:Task": VPC
       register: VPC1    
   
-
-
     - name: createsg
       ec2_group:
         name: SecGroupforVPC
