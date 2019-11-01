@@ -17,10 +17,10 @@
         tags:
           Name: Public
         subnets:
-        - subnet-0605f5368971ae316
-        - subnet-053c28d3a62453c5d
-        - subnet-0e7193a289bee6f85
+        - "{{web_subnet1.subnet.id}}"
+        - "{{web_subnet2.subnet.id}}"
+        - "{{web_subnet3.subnet.id}}"
         routes:
           - dest: 0.0.0.0/0
-            gateway_id: igw-09c6fe21b410b8b59
+            gateway_id: "{{igw.gateway_id}}"
       register: public_route_table
