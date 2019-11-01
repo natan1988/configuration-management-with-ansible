@@ -9,7 +9,7 @@
         image_id: ami-02eac2c0129f6376b
         key_name: ansible
         region: us-east-1
-        security_groups: sg-08173bac912709ba6
+        security_groups: "{{SecGroup.group_id}}"
         instance_type: t2.micro
         assign_public_ip: yes
 
@@ -23,7 +23,7 @@
         min_size: 1
         max_size: 7
         desired_capacity: 3
-        vpc_zone_identifier: [ 'subnet-0605f5368971ae316', 'subnet-053c28d3a62453c5d', 'subnet-0e7193a289bee6f85' ]
+        vpc_zone_identifier: [ "{{web_subnet1.subnet.id}}", "{{web_subnet2.subnet.id}}", "{{web_subnet3.subnet.id}}" ]
         region: us-east-1
         tags:
           - environment: production
