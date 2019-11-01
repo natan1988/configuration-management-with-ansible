@@ -3,7 +3,17 @@
   hosts: localhost
   gather_facts: no
   tasks:
-    local_action:
+
+
+    - name: collect VPC info
+      ec2_vpc_net_facts:
+        region: us-east-1
+        filters:
+          "tag:Task": VPC
+      register: VPC1 
+
+
+    - local_action:
       module: ec2_elb_lb
       name: "New ELB"
       state: present
