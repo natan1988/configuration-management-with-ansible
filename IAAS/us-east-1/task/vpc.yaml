@@ -16,5 +16,11 @@
 
 
 
+    - name: output
+      debug: 
+        var: VPC1     
+
+
+
           
     
