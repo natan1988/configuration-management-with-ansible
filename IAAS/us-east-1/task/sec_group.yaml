@@ -12,7 +12,7 @@
   
 
 
-    - name: createa sg 1
+    - name: createsg
       ec2_group:
         name: SecGroupforVPC
         description: sg group for 1 vpc
