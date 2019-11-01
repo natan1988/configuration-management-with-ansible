@@ -3,8 +3,6 @@
   hosts: localhost
   gather_facts: no
   tasks:
-
-
     - name: collect VPC info
       ec2_vpc_net_facts:
         region: us-east-1
@@ -15,7 +13,7 @@
 
     - local_action:
       module: ec2_elb_lb
-      name: "New ELB"
+      name: "NewELB"
       state: present
       region: us-east-1
       subnets: ['subnet-0605f5368971ae316']
@@ -25,5 +23,5 @@
           load_balancer_port: 80
           instance_port: 80
       tags:
-        Name: "New ELB"
+        Name: "New_ELB"
         
