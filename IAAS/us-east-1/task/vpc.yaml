@@ -13,6 +13,8 @@
         tags:
           Class: Ansible
           Task: VPC
+      register: VPC1
+
 
 
 
